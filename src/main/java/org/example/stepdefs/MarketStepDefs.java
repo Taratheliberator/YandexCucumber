@@ -22,12 +22,7 @@ public class MarketStepDefs {
     private YandexPage yandexPage;
     private String target;
 
-    @Before
-    public void setUp() throws IOException {
-        app = new ApplicationManager();
-        app.init();
-        yandexPage = app.yandex();
-    }
+
 
     @After
     public void tearDown() {
@@ -35,9 +30,18 @@ public class MarketStepDefs {
     }
 
     @Given("Пользователь находится на главной странице Яндекс Маркета")
-    public void пользователь_находится_на_главной_странице() {
+    public void пользователь_находится_на_главной_странице() throws IOException {
+        app = new ApplicationManager();
+        app.init();
+        yandexPage = app.yandex();
+
+    }
+
+    @When("Пользователь переходит в Каталог")
+    public void пользователь_переходит_в_Каталог() {
         yandexPage.goToMarket();
     }
+
     @When("Пользователь переходит в раздел ноутбуков и компьютеров")
     public void пользователь_переходит_в_раздел_ноутбуков_и_компьютеров() {
         yandexPage.goToComputers().goToNotebooks();
