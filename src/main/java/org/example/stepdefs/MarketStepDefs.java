@@ -79,7 +79,7 @@ public class MarketStepDefs {
 
         for (WebElement notebook : allNotebooks) {
             String notebookInfo = notebook.getText();
-           // assertTrue("\nНоутбук не удовлетворяет условиям фильтра: \n" + notebookInfo, yandexPage.isLaptopValid(notebookInfo));
+           assertTrue("\nНоутбук не удовлетворяет условиям фильтра: \n" + notebookInfo, yandexPage.isLaptopValid(notebookInfo));
         }
 
 
