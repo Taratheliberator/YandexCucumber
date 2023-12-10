@@ -13,5 +13,5 @@ import org.junit.runner.RunWith;
         glue = "org.example.stepdefs"
 )
 public class RunCucumberTest {
-    // Пустой класс для запуска тестов Cucumber
+
 }
